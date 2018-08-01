@@ -1,0 +1,11 @@
+strict digraph "" {
+A [value=5];
+C [value=3];
+D [value=4];
+B [value=2];
+E [value=0];
+A -> C  [math="+"];
+C -> E  [math="+"];
+D -> E  [math="+"];
+B -> C  [math="-"];
+}
