@@ -1,0 +1,26 @@
+{
+"nodes":
+        [
+        {"A":4},
+        {"B":4},
+        {"C":10},
+        {"output":0}
+        ],
+        
+"edges":
+        [
+        
+        {"start":"A",
+        "end":"B",
+        "attribute":"+"
+        },
+            
+        {"start":"B",
+        "end":"C",
+        "attribute":"-"
+        }
+            
+        
+        ]
+
+}
