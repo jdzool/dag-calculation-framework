@@ -5,66 +5,57 @@ Created on Wed Oct 11 21:49:19 2017
 
 @author: jondowning
 """
-
 import networkx as nx
 import numpy as np
+from networkx.drawing.nx_pydot import write_dot
+import pygraphviz as pgv
+import pandas as pd 
 
+# Load inputs! 
+
+# Create a directed network 
+# Calculations have a specific direction 
 G = nx.DiGraph()
 
-# Populate nodes 
+# Populate nodes and their values 
 G.add_node('A', attr_dict={'value':5})
 G.add_node('B', attr_dict={'value':2})
 G.add_node('C', attr_dict={'value':3})
-G.add_node('D', attr_dict={'value':0})
+G.add_node('D', attr_dict={'value':4})
+G.add_node('E', attr_dict={'value':0})
 
-# Populate edges 
+# Populate edges and their functions
 G.add_edge('A','C', attr_dict={'math':'+'})
 G.add_edge('B','C', attr_dict={'math':'-'})
-G.add_edge('C','D', attr_dict={'math':'+'})
+G.add_edge('D','E', attr_dict={'math':'+'})
+G.add_edge('C','E', attr_dict={'math':'+'})
 
+# Create a dictionaries: one with values, the next with functions 
 math_dict = nx.get_edge_attributes(G,'math')
-
-# Order math dictionary for processing 
-
 values = nx.get_node_attributes(G,'value')
 
-# Calculation dictionary
+# Provide a map for strings to actual functions 
 calc_dict = {'+':np.add,
              '-':np.subtract,
              '*':np.multiply,
-             '%':np.divide}
+             '%':np.divide}           
 
-             
-ancestors = nx.ancestors(G, 'C')
+# We need to swap the order of our keys -- mathematical functions are order dependant! 
+math_dict_sorted = {}
+for key, math in math_dict.items():
+    math_dict_sorted[tuple(reversed(key))] = math
 
-## Run colapse algorithm -- recursive 
-# while values['D'] == 0: -- this doesn't work because the calc might not be finished 
-# for loop doesn't work either because we keep injecting numbers
-# is there a method to delete nodes once they have been calculated? -- Yes
-# RuntimeError: dictionary changed size during iteration <--- SOLVE THIS! 
-
-#i = 0
-#for i in range(0,3):
-#    print(i)
-#    for key, math in math_dict.items():
-#        val_list = [values[x] for x in key]
-#        
-#        if list(values.values()).count(0) == 1:
-#            last = True
-#        else:
-#            last = False
-#
-#        if all(val_list) or last: # Onlly conduct calcultion if both values have been calculated or if the last set
-#        # conduction calculation and update value 
-#            values[key[1]] = calc_dict[math](*val_list)
-#            math_dict.pop(key, math)
-#    i += 1
+math_dict = math_dict_sorted
 
 # Recursive function     
 def graph_colapse(math_dict):
     # List to remove 
     to_pop = {}
     
+    # Note: The order of mathematical functions is important  
+    # This is a unique problem but has been solved 
+    # Here simplistically we can use an alphabetical sort 
+    # NB: we could use a topological sorting function here
     for key, math in sorted(math_dict.items()):
         val_list = [values[x] for x in key]
 
@@ -74,35 +65,37 @@ def graph_colapse(math_dict):
             last = False
 
         if all(val_list) or last:
-            print('Processing: %s' %str(key))
-            print('Values are: %s' %(val_list))
-            print('Initial key value: %s = %s' %(key[1], values[key[1]]))
+            print('Processing edge: %s' %str(key))
+            print('Initial node value: %s = %s' %(key[0], values[key[0]]))
+            print('Node values are: %s' %(val_list))
+            print('Edge function is %s' %math)
             
-            values[key[1]] = calc_dict[math](*val_list)
-            print('Updated key value: %s = %s' %(key[1], values[key[1]]))
+            values[key[0]] = calc_dict[math](*val_list)
+            print('Updated node value: %s = %s' %(key[0], values[key[0]]))
+            # Which items have been calculated 
             to_pop[key] = math
 
-    # Remove
+    # Remove edges which have been calculated 
     for key, math in to_pop.items():
         math_dict.pop(key, math)
         
     return math_dict
-    
+
+# Run recursive function until all empty variables are complete.     
 while len(math_dict) > 0:
-    print(math_dict.items())
+    print(sorted(math_dict.items()))
     math_dict = graph_colapse(math_dict)
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+# Saving output and draw 
+dot_path = "example_graph.dot"
+
+# Write .dot file to local drive 
+write_dot(G,dot_path)
+
+# Export visualisation 
+# Edge attributes are not visualised but this is possible 
+V = pgv.AGraph(dot_path)
+V.layout(prog='dot')
+V.draw('simple.png')
+V.draw('simple.pdf')   
