@@ -32,7 +32,14 @@ G.add_edge('C','E', attr_dict={'math':'+'})
 
 # Create a dictionaries: one with values, the next with functions 
 math_dict = nx.get_edge_attributes(G,'math')
+print(math_dict)
 values = nx.get_node_attributes(G,'value')
+
+# Add edge labels -- the same as the math labels 
+for edge in G.edges(): 
+    a, b = edge[0], edge[1]
+    print(str(a) + ' ' + str(b))
+    G.get_edge_data('A','C')['attr_dict']['label'] = G.get_edge_data('A','C')['attr_dict']['math']
 
 # Provide a map for strings to actual functions 
 calc_dict = {'+':np.add,
@@ -97,5 +104,5 @@ write_dot(G,dot_path)
 # Edge attributes are not visualised but this is possible 
 V = pgv.AGraph(dot_path)
 V.layout(prog='dot')
-V.draw('simple.png')
-V.draw('simple.pdf')   
+V.draw('linear_example.png')
+V.draw('linear_example.pdf')   

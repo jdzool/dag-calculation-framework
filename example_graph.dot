@@ -4,8 +4,8 @@ B [attr_dict="{'value': 2}"];
 C [attr_dict="{'value': 3}"];
 D [attr_dict="{'value': 4}"];
 E [attr_dict="{'value': 0}"];
-A -> D  [attr_dict="{'math': '+'}"];
-B -> D  [attr_dict="{'math': '-'}"];
-C -> D  [attr_dict="{'math': '+'}"];
+A -> C  [attr_dict="{'math': '+', 'label': '+'}"];
+B -> C  [attr_dict="{'math': '-'}"];
+C -> E  [attr_dict="{'math': '+'}"];
 D -> E  [attr_dict="{'math': '+'}"];
 }
