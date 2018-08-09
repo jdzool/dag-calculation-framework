@@ -1,0 +1,11 @@
+strict digraph  {
+A [attr_dict="{'value': 5}"];
+B [attr_dict="{'value': 2}"];
+C [attr_dict="{'value': 3}"];
+D [attr_dict="{'value': 4}"];
+E [attr_dict="{'value': 0}"];
+A -> C  [attr_dict="{'math': '+', 'label': '+'}"];
+B -> C  [attr_dict="{'math': '-'}"];
+C -> E  [attr_dict="{'math': '+'}"];
+D -> E  [attr_dict="{'math': '+'}"];
+}

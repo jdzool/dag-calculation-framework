@@ -45,7 +45,7 @@ calc_dict = {'+':np.add,
 
 # We need to sort our 
 
-We need to swap the order of our keys -- mathematical functions are order dependant! 
+# We need to swap the order of our keys -- mathematical functions are order dependant! 
 math_dict_sorted = {}
 for key, math in math_dict.items():
     math_dict_sorted[tuple(reversed(key))] = math

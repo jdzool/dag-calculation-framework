@@ -17,19 +17,20 @@ path_dot = 'example_edge_labels.dot'
 # Directed graph
 G = pgv.AGraph(directed=True)
 
-# Populate nodes and their functions
+# Populate nodes and their values
 G.add_node('A', value = 1)
 G.add_node('B', value = 1)
 G.add_node('C', value = 1)
 G.add_node('D', value = 1)
 G.add_node('E', value = 1)
 
-# Populate edges and their functions
+# Populate edges and add their functions
 G.add_edge('A','D', math = '+')
-G.add_edge('B','D', math = '+')
-G.add_edge('C','D', math = '+')
+G.add_edge('B','D', math = '-')
+G.add_edge('C','D', math = '*')
 G.add_edge('D','E', math = '+')
 
+# Add edges labels
 for edge in G.edges(): 
     a, b = edge[0], edge[1]
     G.get_edge(a,b).attr['label'] = ' ' + G.get_edge(a,b).attr['math']
