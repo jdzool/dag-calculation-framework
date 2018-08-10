@@ -6,7 +6,7 @@ Numerical calculations can be defined in a graphical formats. Here graphical net
 
 When defining a calculation we start with a technical specification. This states inputs and outputs in terms of  their mathematical context. Each variable could be defined further as to set it belongs to (for example Real numbers).
 
-![Technical Specification of a calculation](https://github.com/jdvt/dag-calculation-framework/blob/master/readme_images/technical_specification.png?v=4&s=200)
+![Technical Specification of a calculation](https://github.com/jdvt/dag-calculation-framework/blob/master/readme_images/technical_specification.png)
 
 The implimentation of a calculation is completed using a computational tool. Loosely this is any framework that allows inputs and outputs joined through a chained mathematics. 
 
