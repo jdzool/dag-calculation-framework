@@ -6,23 +6,21 @@ Numerical calculations can be defined in a graphical formats. Here graphical net
 
 When defining a calculation we start with a technical specification. This states inputs and outputs in terms of  their mathematical context. Each variable could be defined further as to set it belongs to (for example Real numbers).
 
-![Technical Specification of a calculation](https://github.com/jdvt/dag-calculation-framework/blob/master/readme_images/technical_specification.png)
+<img src="https://github.com/jdvt/dag-calculation-framework/blob/master/readme_images/technical_specification.png" height="150" align="middle">
 
 The implimentation of a calculation is completed using a computational tool. Loosely this is any framework that allows inputs and outputs joined through a chained mathematics. 
 
 This could be through code: 
 
-![Calculation implemented in code](https://github.com/jdvt/dag-calculation-framework/blob/master/readme_images/code_implementation.png){:height="200px" width="48px"}
+<img src="https://github.com/jdvt/dag-calculation-framework/blob/master/readme_images/code_implementation.png" height="150" align="middle">
 
 Or by means of some graphical user interface that allows the appropriate inputs, for example Excel (and of course other tools exist!): 
 
-
-<img src="https://github.com/jdvt/dag-calculation-framework/blob/master/readme_images/excel_implementation.png" height="150">
+<img src="https://github.com/jdvt/dag-calculation-framework/blob/master/readme_images/excel_implementation.png" height="150" align="middle">
 
 Finally I propose that mixing the two to implement a calculation as a graphical network (below). Impliementing a calculation as pure code or purely in a graphical interface has various pros / cons. The benefits of using directed acyclic graphs is presented below. 
 
-![Calculation implemented as a graphical network](https://github.com/jdvt/dag-calculation-framework/blob/master/readme_images/graphical_network_implementation.png){:height="200px"}
-
+<img src="https://github.com/jdvt/dag-calculation-framework/blob/master/readme_images/graphical_network_implementation.png" height="150" align="middle">
 
 ## Calculation frameworks at Directed Acyclic Graphs
 
