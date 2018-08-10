@@ -8,25 +8,18 @@ When defining a calculation we start with a technical specification. This states
 
 ![Technical Specification of a calculation](https://github.com/jdvt/dag-calculation-framework/blob/master/readme_images/technical_specification.png)
 
-
-<d1>
-<img src= alt="Technical Specification of a calculation" height = 200">
-</d1>
-
-
 The implimentation of a calculation is completed using a computational tool. Loosely this is any framework that allows inputs and outputs joined through a chained mathematics. 
 
 This could be through code: 
-<d1>
-<img src="https://github.com/jdvt/dag-calculation-framework/blob/master/readme_images/code_implementation.png" alt="Calculation implemented in code" height = 200">
-</d1>
-
+![Calculation implemented in code](https://github.com/jdvt/dag-calculation-framework/blob/master/readme_images/code_implementation.png)
 
 Or by means of some graphical user interface that allows the appropriate inputs, for example Excel (and of course other tools exist!): 
-![alt text](https://github.com/jdvt/dag-calculation-framework/blob/master/readme_images/excel_implementation.png "Calculation implemented in a graphical user interface")
+
+![Calculation implemented in a graphical user interface"](https://github.com/jdvt/dag-calculation-framework/blob/master/readme_images/excel_implementation.png)
 
 Finally I propose that mixing the two to implement a calculation as a graphical network (below). Impliementing a calculation as pure code or purely in a graphical interface has various pros / cons. The benefits of using directed acyclic graphs is presented below. 
-![alt text](https://github.com/jdvt/dag-calculation-framework/blob/master/readme_images/graphical_network_implementation.png "Calculation implemented as a graphical network")
+
+![Calculation implemented as a graphical network](https://github.com/jdvt/dag-calculation-framework/blob/master/readme_images/graphical_network_implementation.png)
 
 
 ## Calculation frameworks at Directed Acyclic Graphs
