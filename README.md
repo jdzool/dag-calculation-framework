@@ -1,3 +1,9 @@
+<style>
+.aligncenter {
+    text-align: center;
+}
+</style>
+
 # Calculation frameworks 
 
 Numerical calculations can be defined in a graphical formats. Here graphical networks (networkx and pygraphviz) are used to store variables and functions on nodes and edges respectively. Calculations are then completed by collapsing each Directed Acyclic Graph (DAG)
@@ -6,7 +12,7 @@ Numerical calculations can be defined in a graphical formats. Here graphical net
 
 When defining a calculation we start with a technical specification. This states inputs and outputs in terms of  their mathematical context. Each variable could be defined further as to set it belongs to (for example Real numbers).
 
-<img src="https://github.com/jdvt/dag-calculation-framework/blob/master/readme_images/technical_specification.png" height="150" align="middle">
+<img src="https://github.com/jdvt/dag-calculation-framework/blob/master/readme_images/technical_specification.png" height="120">
 
 The implimentation of a calculation is completed using a computational tool. Loosely this is any framework that allows inputs and outputs joined through a chained mathematics. 
 
