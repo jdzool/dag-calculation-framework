@@ -1,6 +1,12 @@
-## Calculation frameworks 
+# Calculation frameworks 
 
-Numerical calculations can be defined in a graphical formats. 
+Numerical calculations can be defined in a graphical formats. Here graphical networks (networkx and pygraphviz) are used to store variables and functions on nodes and edges respectively. Calculations are then completed by collapsing each Directed Acyclic Graph (DAG)
+
+## Background 
+
+
+
+Completing 
 
 This has the following advantages 
 *Feature* Calculations are self documenting: the code is the document and vice versa
@@ -10,7 +16,7 @@ This has the following advantages
 *Benefit* Each variable can be changed to allow for sensitivity analysis (variables are abstracted from formula)
 
 
-### Functionality
+## Functionality
 
 Network defined in pygraphviz 
 -- attributes given to nodes and edges 
