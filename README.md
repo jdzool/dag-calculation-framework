@@ -12,7 +12,7 @@ The implimentation of a calculation is completed using a computational tool. Loo
 
 This could be through code: 
 
-![Calculation implemented in code](https://github.com/jdvt/dag-calculation-framework/blob/master/readme_images/code_implementation.png){:height="200px"}
+![Calculation implemented in code](https://github.com/jdvt/dag-calculation-framework/blob/master/readme_images/code_implementation.png){:height="200px" width="48px"}
 
 Or by means of some graphical user interface that allows the appropriate inputs, for example Excel (and of course other tools exist!): 
 
