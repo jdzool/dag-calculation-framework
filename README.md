@@ -33,14 +33,16 @@ Finally I propose that mixing the two to implement a calculation as a graphical 
 ## Calculation frameworks at Directed Acyclic Graphs
 
 Using Directed Acyclic Graphs as a calculation framework has the following advantages:
-**Feature** Calculations are self documenting: the code is the document and vice versa
-**Benefit** 
+
+**Feature: Calculations are self documenting -- the code is the document and vice versa**
+
+**Benefits:** 
 * Calculations can be easily understood 
 * Documentation is readily available 
 * Documentation can be easily created as the calculations change 
 
-**Feature** Calculations themselves are defined in code 
-**Benefit** 
+**Feature: Calculations themselves are defined in code** 
+**Benefits:** 
 * Version control is possible 
 * Each variable can be easily changed to allow for various types of analysis 
 * Testability 
