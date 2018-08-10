@@ -1,9 +1,3 @@
-<style>
-.aligncenter {
-    text-align: center;
-}
-</style>
-
 # Calculation frameworks 
 
 Numerical calculations can be defined in a graphical formats. Here graphical networks (networkx and pygraphviz) are used to store variables and functions on nodes and edges respectively. Calculations are then completed by collapsing each Directed Acyclic Graph (DAG)
@@ -18,9 +12,9 @@ The implimentation of a calculation is completed using a computational tool. Loo
 
 This could be through code: 
 
-<p class="aligncenter">
+<center>
 <img src="https://github.com/jdvt/dag-calculation-framework/blob/master/readme_images/code_implementation.png" height="150">
-</p>
+</center>
 
 Or by means of some graphical user interface that allows the appropriate inputs, for example Excel (and of course other tools exist!): 
 
@@ -42,6 +36,7 @@ Using Directed Acyclic Graphs as a calculation framework has the following advan
 * Documentation can be easily created as the calculations change 
 
 **Feature: Calculations themselves are defined in code** 
+
 **Benefits:** 
 * Version control is possible 
 * Each variable can be easily changed to allow for various types of analysis 
