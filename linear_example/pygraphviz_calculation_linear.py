@@ -26,7 +26,7 @@ G.add_node('D', attr_dict={'value':4})
 G.add_node('E', attr_dict={'value':0})
 
 # Populate edges and their functions
-G.add_edge('A','C', attr_dict={'math':'+'})
+G.add_edge('A','B', attr_dict={'math':'+'})
 G.add_edge('B','C', attr_dict={'math':'-'})
 G.add_edge('D','E', attr_dict={'math':'+'})
 G.add_edge('C','E', attr_dict={'math':'+'})

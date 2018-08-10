@@ -18,7 +18,7 @@ import pygraphviz as pgv
 pgv has attribute functionality 
 """
 
-path_dot = 'linear_example_with_edge_labels.dot'
+path_dot = 'multiple_example_with_edge_labels.dot'
 
 # Directed graph
 G = pgv.AGraph(directed=True)
@@ -31,9 +31,9 @@ G.add_node('D', value = 2)
 G.add_node('E', value = 0)
 
 # Populate edges and add their functions
-G.add_edge('A','C', math = '+')
-G.add_edge('B','C', math = '-')
-G.add_edge('C','D', math = '*')
+G.add_edge('A','D', math = 'three_var')
+G.add_edge('B','D', math = 'three_var')
+G.add_edge('C','D', math = 'three_var')
 G.add_edge('D','E', math = '+')
 
 # Add edges labels
@@ -44,8 +44,8 @@ for edge in G.edges():
 # Write dot from pgv
 G.layout(prog='dot')
 G.write(path_dot)
-G.draw('linear_example_with_edge_labels.png')
-G.draw('linear_example_with_edge_labels.pdf')  
+G.draw('multiple_example_with_edge_labels.png')
+G.draw('multiple_example_with_edge_labels.pdf')  
 
 # Pick up dot into networkx for colapse 
 """
@@ -65,10 +65,14 @@ print('The values_dict is:')
 print(values_dict)
 
 # Provide a map for strings to actual functions 
+def three_var(a,b,c): 
+    return a**2 + b**2 + c**2
+
 calc_dict = {'+':np.add,
              '-':np.subtract,
              '*':np.multiply,
-             '%':np.divide}           
+             '%':np.divide,
+             'three_var':three_var}           
 
 # We need to swap the order of our keys -- mathematical functions are order dependant! 
 math_dict_sorted = {}
