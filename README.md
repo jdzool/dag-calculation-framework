@@ -16,7 +16,8 @@ This could be through code:
 
 Or by means of some graphical user interface that allows the appropriate inputs, for example Excel (and of course other tools exist!): 
 
-![Calculation implemented in a graphical user interface"](https://github.com/jdvt/dag-calculation-framework/blob/master/readme_images/excel_implementation.png){:height="200px"}
+
+<img src="https://github.com/jdvt/dag-calculation-framework/blob/master/readme_images/excel_implementation.png" height="150">
 
 Finally I propose that mixing the two to implement a calculation as a graphical network (below). Impliementing a calculation as pure code or purely in a graphical interface has various pros / cons. The benefits of using directed acyclic graphs is presented below. 
 
