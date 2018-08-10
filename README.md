@@ -30,7 +30,6 @@ Using Directed Acyclic Graphs as a calculation framework has the following advan
 
 **Feature: Calculations are self documenting -- a calculation diagram is readily created**
 
-**Benefits:** 
 * Calculations can be easily understood 
 * Documentation is simple and easy to understand  
 * New documentation can be easily created as calculations change 
@@ -38,14 +37,13 @@ Using Directed Acyclic Graphs as a calculation framework has the following advan
 
 **Feature: Calculations themselves are defined in code** 
 
-**Benefits:** 
 * Version control is possible 
 * Each variable can be easily changed to allow for various types of analysis (for example sensitivity analysis)
 * Calculations can be tested to allow for repeatibility  
 
-However, the following challenges are not solved using this calculation framework: 
+**However, the following challenges are not solved using this calculation framework:**
 * In this framework users must be able to understand this programming language (python) prior to implimenting calculations
-* (currently) Complex calculations are difficult to input 
+* (currently) Complex calculations are difficult to input. In the simplist of cases each note must be connected only with simple mathematical opperators. 
 
 # Implementation 
 
