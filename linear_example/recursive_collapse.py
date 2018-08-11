@@ -1,5 +1,5 @@
 # Recursive function     
-def graph_colapse(math_dict, values_dict, calc_dict):
+def graph_collapse(math_dict, values_dict, calc_dict):
     # List to remove 
     to_pop = {}
     

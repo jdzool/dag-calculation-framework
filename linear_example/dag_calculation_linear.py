@@ -10,7 +10,7 @@ import numpy as np
 from networkx.drawing.nx_pydot import write_dot
 import pygraphviz as pgv
 import pandas as pd 
-import recursive_colapse 
+import recursive_collapse 
 
 import pygraphviz as pgv
 
@@ -80,4 +80,4 @@ math_dict = math_dict_sorted
 # Run recursive function until all empty variables are complete.     
 while len(math_dict) > 0:
     print(sorted(math_dict.items()))
-    math_dict =  recursive_colapse.graph_colapse(math_dict, values_dict, calc_dict)
+    math_dict =  recursive_collapse.graph_collapse(math_dict, values_dict, calc_dict)
