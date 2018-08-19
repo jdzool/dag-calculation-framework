@@ -41,11 +41,11 @@ Using Directed Acyclic Graphs as a calculation framework has the following advan
 
 * Version control is possible 
 * Each variable can be easily changed to allow for various types of analysis (for example sensitivity analysis)
-* Calculations can be tested to allow for repeatibility  
+* Calculations can be tested to show repeatibility  
 
 **However, the following challenges are not solved using this calculation framework:**
 * In this framework users must be able to understand this programming language (python) prior to implimenting calculations
-* (currently) Complex calculations are difficult to input. In the simplist of cases each note must be connected only with simple mathematical opperators. 
+* (currently) Complex calculations are difficult to input. In the simplist of cases each node must be connected only with simple mathematical opperators. For further work on more complex implimentations see the ```work_in_progress``` folder. 
 
 # Implementation 
 
@@ -53,4 +53,4 @@ Graphical networks are defined in pygraphviz. Pygraphviz allow for attributes to
 
 Calculations are completed in networkx. Networkx has many more functions for dealing with graphical data structures and specifically directed acyclic graphs (DAGs)
 
-Use ```linear_example/dag_calculation_linear.py```. Inputs are defined as the attributes on nodes and edges respectively (```values``` and ```math```). In networkx these attributes are converted to dictionaries for use in calculation. Keys are sorted in order to process the DAG from input to final output. A recursive function (```recursive_collapse.py```) is used to process the values against each operator until each value in the graph has been updated. 
+Use ```linear_example/dag_calculation_linear.py```. Inputs are defined as the attributes on nodes and edges respectively (```values``` and ```math```). In networkx these attributes are converted to dictionaries for use in calculation. Keys are sorted in order to process the DAG from input to final output. A recursive function (```recursive_collapse.py```) is used to process the values against each operator until each value in the graph has been updated with those above it. 

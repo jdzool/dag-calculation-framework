@@ -10,7 +10,7 @@ import numpy as np
 from networkx.drawing.nx_pydot import write_dot
 import pygraphviz as pgv
 import pandas as pd 
-import recursive_colapse 
+import recursive_collapse 
 
 import pygraphviz as pgv
 
